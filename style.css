@@ -1,0 +1,110 @@
+body {
+    background-color: #0f001a; /* Very dark purple */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    /* Thin SR cursor */
+    cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='32' height='32' style='font-family:sans-serif; font-weight:200;'><text y='20' font-size='12' fill='%23d8b4fe'>SR</text></svg>"), auto;
+}
+
+.container {
+    text-align: center;
+    background: rgba(255, 255, 255, 0.02); /* Almost invisible background */
+    padding: 60px;
+    border-radius: 2px; /* Sharp, modern corners */
+    border: 1px solid rgba(216, 180, 254, 0.1); /* Very subtle border */
+    max-width: 400px;
+}
+
+h1 {
+    color: #d8b4fe; /* Light lavender */
+    font-weight: 200; /* Extra thin */
+    font-size: 1.8rem;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    margin-bottom: 40px;
+}
+
+.btn {
+    background: transparent;
+    border: 1px solid rgba(216, 180, 254, 0.4);
+    color: #d8b4fe;
+    padding: 12px 40px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 300;
+    letter-spacing: 2px;
+    transition: all 0.4s ease;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background: rgba(216, 180, 254, 0.1);
+    border-color: #d8b4fe;
+}
+
+#noButton {
+    border: none;
+    opacity: 0.5;
+}
+
+
+
+
+.gif_container img {
+    width: 250px;
+    border-radius: 15px;
+    margin: 5px 0;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+
+#yesButton {
+    background-color: #ff4d6d;
+    color: white;
+}
+
+#noButton {
+    background-color: #6c757d;
+    color: white;
+    position: relative; /* Essential for the moving effect */
+}
+
+.heart {
+    position: absolute;
+    color: #ff4d6d;
+    font-size: 20px;
+    pointer-events: none; /* So they don't block button clicks */
+    animation: floatAndFade 1.5s linear forwards;
+    z-index: 9999;
+}
+
+@keyframes floatAndFade {
+    0% {
+        transform: translateY(0) scale(1);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-50px) scale(1.5);
+        opacity: 0;
+    }
+}   
+
+/* This changes the cursor for the whole page */
+body {
+    /* Using an emoji as a cursor! */
+    cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='32' height='32' style='font-size: 24px;'><text y='20'>🪄</text></svg>"), auto;
+}
+
+/* Optional: change the cursor to a heart when hovering over buttons */
+button, .btn {
+    cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='32' height='32' style='font-size: 24px;'><text y='20'>💖</text></svg>"), pointer !important;
+}
